@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>LEGION Header</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <div class="topbar">
+      <div class="container">
+        <div class="topbar-left">
+          <span>Phone: +123 456 7890</span>
+          <a href="#location">
+            <svg viewBox="0 0 384 512" aria-hidden="true">
+              <path
+                d="M192 0C86 0 0 86 0 192c0 77 27 99 172 309a24 24 0 0 0 40 0C357 291 384 269 384 192 384 86 298 0 192 0zm0 272a80 80 0 1 1 0-160 80 80 0 0 1 0 160z"
+              />
+            </svg>
+            Our Location
+          </a>
+        </div>
+        <div class="topbar-right">
+          <select aria-label="Account">
+            <option value="account" selected>My Account</option>
+            <option value="sign-in">Sign In</option>
+            <option value="register">Register</option>
+          </select>
+          <select aria-label="Language">
+            <option value="en" selected>English</option>
+            <option value="km">Khmer</option>
+            <option value="vi">Vietnamese</option>
+          </select>
+          <select class="currency-select" aria-label="Currency">
+            <option value="USD">USD</option>
+            <option value="KHR">KHR</option>
+          </select>
+        </div>
+      </div>
+    </div>
+
+    <header class="header">
+      <div class="container">
+        <a href="/" class="logo">LEGION</a>
+
+        <form class="search" role="search" onsubmit="return false;">
+          <input type="search" placeholder="Search..." aria-label="Search" />
+          <button type="submit" aria-label="Search">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <circle cx="10.5" cy="10.5" r="6.5" />
+              <path d="M15.5 15.5 21 21" />
+            </svg>
+          </button>
+        </form>
+
+        <div class="actions">
+          <a href="#wishlist" class="icon-btn" aria-label="Wishlist">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path
+                d="M12 21s-8-5.2-8-11a4.8 4.8 0 0 1 8-3.5A4.8 4.8 0 0 1 20 10c0 5.800-8 11-8 11z"
+              />
+            </svg>
+            <span class="badge">3</span>
+          </a>
+          <a href="#cart" class="icon-btn" aria-label="Cart">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path
+                d="M2 3h3l2.600 12.400a1 1 0 0 0 1 .8h9.300a1 1 0 0 0 1-.8L21 7H6"
+              />
+              <circle cx="9" cy="20" r="1.200" />
+              <circle cx="17" cy="20" r="1.200" />
+            </svg>
+            <span class="badge">5</span>
+          </a>
+        </div>
+      </div>
+    </header>
+  </body>
+</html>

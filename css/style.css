@@ -1,0 +1,230 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Siemreap&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css');
+
+:root {
+  --topbar: #151618;
+  --main: #20232a;
+  --accent: #f2c01e;
+  --badge: #e0334c;
+  --text: #ffffff;
+  --muted: #9aa0a8;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Roboto", Arial, sans-serif;
+  background: #f4f4f4;
+  color: var(--text);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.topbar {
+  height: 36px;
+  background: var(--topbar);
+  font-size: 13px;
+}
+
+.topbar .container {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.topbar-left {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.topbar-left svg {
+  width: 11px;
+  height: 14px;
+  margin-right: 3px;
+  fill: currentColor;
+  vertical-align: -2px;
+}
+
+.topbar-right {
+  display: flex;
+  gap: 24px;
+  font-size: 12px;
+}
+
+.topbar-right select {
+  max-width: 100%;
+  border: 0;
+  background: transparent;
+  color: var(--text);
+  font: inherit;
+  cursor: pointer;
+}
+
+.topbar-right select option {
+  color: #222;
+}
+
+.header {
+  height: 70px;
+  border-bottom: 2px solid var(--accent);
+  background: var(--main);
+}
+
+.header .container {
+  display: grid;
+  height: 100%;
+  grid-template-columns: 1fr minmax(260px, 500px) 1fr;
+  align-items: center;
+  gap: 20px;
+}
+
+.logo {
+  font-size: 30px;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+}
+
+.search {
+  display: flex;
+  height: 36px;
+  overflow: hidden;
+  border-radius: 18px;
+  background: #fff;
+}
+
+.search input {
+  flex: 1;
+  min-width: 0;
+  border: 0;
+  outline: 0;
+  padding: 0 14px;
+  color: #333;
+  font: 15px "Roboto", sans-serif;
+}
+
+.search input::placeholder {
+  color: #666;
+}
+
+.search button {
+  display: grid;
+  width: 48px;
+  border: 0;
+  background: var(--accent);
+  cursor: pointer;
+  place-items: center;
+}
+
+.search button svg {
+  width: 14px;
+  height: 14px;
+  fill: none;
+  stroke: #222;
+  stroke-width: 2.4;
+}
+
+.search:focus-within {
+  box-shadow: 0 0 0 3px rgba(242, 192, 30, 0.45);
+}
+
+.actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 26px;
+  padding-right: 20px;
+}
+
+.icon-btn {
+  position: relative;
+  display: grid;
+  width: 24px;
+  height: 24px;
+  color: #fff;
+  place-items: center;
+}
+
+.icon-btn svg {
+  width: 20px;
+  height: 20px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.badge {
+  position: absolute;
+  top: -6px;
+  right: -9px;
+  display: grid;
+  min-width: 16px;
+  height: 16px;
+  border-radius: 8px;
+  padding: 0 4px;
+  background: var(--badge);
+  color: #fff;
+  font-size: 10px;
+  font-weight: 700;
+  place-items: center;
+}
+
+a:focus-visible,
+button:focus-visible,
+.topbar-right select:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
+@media (max-width: 700px) {
+  .topbar-left span:last-child {
+    display: none;
+  }
+
+  .header {
+    height: auto;
+    padding: 12px 0;
+  }
+
+  .header .container {
+    grid-template-columns: 1fr auto;
+    grid-template-areas:
+      "logo actions"
+      "search search";
+  }
+
+  .logo {
+    grid-area: logo;
+  }
+
+  .actions {
+    grid-area: actions;
+    padding-right: 10px;
+  }
+
+  .search {
+    grid-area: search;
+  }
+}
+
+.siemreap-regular {
+  font-family: "Siemreap", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
